@@ -58,3 +58,6 @@ StringBuilder는 동기화를 지원하지않아 멀티쓰레드 환경에서는
 </pre>
 
 
+<hr>
+<h2>참조</h2>
+<h3><a href="https://dev-coco.tistory.com/">슬기로운 개발 생활</a></h3>
