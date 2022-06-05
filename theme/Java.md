@@ -40,7 +40,7 @@
 인터프리터는 고레벨 언어를 바로 기계어로 번역하지 않고 중간 형태로 변환시킨 후 실행합니다.
 반면 컴파일러는 고레벨 언어를 바로 기계어로 변환합니다.
 <hr>
-<b>2. String, StringBuilder, StringBuffer의 차이 </b>
+<b>2. String, StringBuffer, StringBuilder의 차이 </b>
 <hr>
 <ul>
   <li>String은 불변속성이지만, StringBuffer와 StringBuilder는 가변의 속성을 가집니다</li>
