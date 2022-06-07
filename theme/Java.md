@@ -67,7 +67,7 @@ StringBuilder는 동기화를 지원하지않아 멀티쓰레드 환경에서는
   <li><b>private</b> - 해당 클래스에서만 접근 가능합니다</li>
 </ul>  
 <hr>
-<b>4. OOP의 4가지 특징에 대해 설명하시오</b>
+<b>4. OOP(Object Oriented Programming, 객체지향)의 4가지 특징에 대해 설명하시오</b>
 <hr>
 <ul>
   <li>캡슐화</li>
