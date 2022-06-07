@@ -56,8 +56,13 @@ String 클래스는 불변하기 때문에 문자열을 수정하는 시점에 <
 (String 또한 불변이기에 여러개의 thread가 불변객체에 접근해서 수정하려해도 수정이 불가능하기때문에 멀티쓰레드 환경에서 안정성이 있습니다)
 StringBuilder는 동기화를 지원하지않아 멀티쓰레드 환경에서는 적합하지 않지만, 단일쓰레드에서의 성능은 StringBuffer보다 뛰어납니다
 </pre>
-
+<hr>
+<b>3. 접근제한자에 대해서 설명하세요</b>
+<ul>
+  <li
+</ul>  
 
 <hr>
 <h2>참조</h2>
-<h3><a href="https://dev-coco.tistory.com" target="_blank">슬기로운 개발 생활</a></h3>
+  <a href="https://naver.com" target="_blank">네이버</a>
+<h3><a href="https://dev-coco.tistory.com">슬기로운 개발 생활</a></h3>
