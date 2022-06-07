@@ -57,12 +57,17 @@ String 클래스는 불변하기 때문에 문자열을 수정하는 시점에 <
 StringBuilder는 동기화를 지원하지않아 멀티쓰레드 환경에서는 적합하지 않지만, 단일쓰레드에서의 성능은 StringBuffer보다 뛰어납니다
 </pre>
 <hr>
-<b>3. 접근제한자에 대해서 설명하세요</b>
+<b>3. 접근제어자에 대해서 설명하세요</b>
+<hr>
 <ul>
-  <li
+  <li>변수 또는 메소드의 접근 범위를 설정해주기 위해서 사용하는 Java의 예약어를 의미하며, 총 4가지 종류가 있습니다</li>
+  <li><b>public</b> - 접근제한이 없습니다. 같은 프로젝트 내 어디서든 사용 가능합니다</li>
+  <li><b>protected</b> - 해당 패키지 내, 다른 패키지에서 상속받아 자손 클래스에서 접근 가능합니다</li>
+  <li><b>(default는 생략이 가능합니다)</b> - 해당 패키지 내에서만 접근 가능합니다</li>
+  <li><b>private</b> - 해당 클래스에서만 접근 가능합니다</li>
 </ul>  
 
 <hr>
 <h2>참조</h2>
-  <a href="https://naver.com" target="_blank">네이버</a>
-<h3><a href="https://dev-coco.tistory.com">슬기로운 개발 생활</a></h3>
+<h3><a href="https://www.youtube.com/channel/UCHFz--glnVVP1xBLA-8kltg">인큐티비 - 유튜브</a>
+<h3><a href="https://dev-coco.tistory.com">슬기로운 개발 생활 - 블로그</a></h3>
