@@ -122,10 +122,21 @@ StringBuilder는 동기화를 지원하지않아 멀티쓰레드 환경에서는
   <li><b>ISP</b> - 인터페이스 분리 원칙 </li>
   <p>인터페이스를 클라이언트에 특화되도록 분리시키라는 설계 원칙입니다</p>
   <li><b>DIP</b> - 의존 역전 원칙</li>
-  <p>의존 관계를 맺을 때 변화하기 쉬운 것 또는 자주 변화하는 것보다는 변화하기 어려운 것, 거의 변화가 없는 것에 의존하라는 것 입니다..</p>
+  <p>의존 관계를 맺을 때 변화하기 쉬운 것 또는 자주 변화하는 것보다는 변화하기 어려운 것, 거의 변화가 없는 것에 의존하라는 것 입니다.</p>
 </ul>
+<hr>
+<b>6. JVM 에대해 설명하시오</b>
+<hr>
+<pre>
+JVM 이란?
+자바 가상 머신으로 자바 바이트 코드를 실행할 수 있는 주체
 
+운영체제 위에서 동작하는 프로세스로 자바코드를 컴파일해서 얻은 바이트 코드를 해당 운영체제가 이해 할 수 있는 기계어로 바꿔 실행시켜 주는 역할을 한다.
 
+Java와 OS사이의 중개자 역할 그리고 가장 중요한 메모리 관리 Garbage Collection을 수행한다.
+
+크게 Class Loader, Execution Engine, Garbage Collection, Runtime Data Area 로 나뉜다.
+</pre>
 <hr>
 <h2>참조</h2>
 <h3><a href="https://www.youtube.com/channel/UCHFz--glnVVP1xBLA-8kltg">인큐티비 - 유튜브</a>
