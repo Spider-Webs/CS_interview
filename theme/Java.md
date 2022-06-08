@@ -129,13 +129,14 @@ StringBuilder는 동기화를 지원하지않아 멀티쓰레드 환경에서는
 <hr>
 <pre>
 JVM 이란?
-자바 가상 머신으로 자바 바이트 코드를 실행할 수 있는 주체
+자바 가상 머신으로 자바 바이트 코드를 실행할 수 있는 주체입니다
 
-운영체제 위에서 동작하는 프로세스로 자바코드를 컴파일해서 얻은 바이트 코드를 해당 운영체제가 이해 할 수 있는 기계어로 바꿔 실행시켜 주는 역할을 한다.
+운영체제 위에서 동작하는 프로세스로 자바코드를 컴파일해서 얻은 바이트 코드를 
+해당 운영체제가 이해 할 수 있는 기계어로 바꿔 실행시켜 주는 역할을 합니다
 
-Java와 OS사이의 중개자 역할 그리고 가장 중요한 메모리 관리 Garbage Collection을 수행한다.
+Java와 OS사이의 중개자 역할 그리고 가장 중요한 메모리 관리 Garbage Collection을 수행합니다
 
-크게 Class Loader, Execution Engine, Garbage Collection, Runtime Data Area 로 나뉜다.
+크게 Class Loader, Execution Engine, Garbage Collection, Runtime Data Area 로 나뉩니다
 </pre>
 <hr>
 <h2>참조</h2>
