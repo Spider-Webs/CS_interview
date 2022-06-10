@@ -209,13 +209,13 @@ new 연산자로 인스턴스 생성 불가능
 <hr>
 <b>9.  CheckedException과 UnCheckedException의 차이를 설명해주세요. </b>
 <hr>
-<h5>CheckedException</h5>
+<h5>CheckedException 이란?</h5>
 <pre>
 실행하기 전에 예측 가능한 예외들을 말하는데, 체크 예외가 발생할 수 있는 메소드를
 사용할 경우, 복구가 가능한 예외들이기 때문에 반드시 예외를 처리하는 코드를 작성해야 합니다. 
 catch문으로 예외를 잡거나, throws로 예외를 자신을 호출한 클래스로 던지는 방법으로 해결해야 합니다.
 </pre>
-<h5>UnCheckedException</h5>
+<h5>UnCheckedException 이란?</h5>
 <pre>
 실행하고 난 후에 알 수 있는 예외들을 말하는데, 언체크 예외라고 불리는 이유는 명시적으로 예외처리를 강제하지 않기 때문입니다.
 언체크 예외는 따로 catch문으로 예외를 잡거나, throws로 선언하지 않아도 됩니다. 
