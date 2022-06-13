@@ -1,7 +1,22 @@
 <h2>자바 기술 면접</h2>
-
 <hr>
-<b>0. Java의 특징을 설명해주세요 </b>
+<a href="#zero">0. Java의 특징을 설명해주세요</a><br><br>
+<a href="#one">1. 컴파일</a><br><br>
+<a href="#two">2. String, StringBuffer, StringBuilder의 차이 </a><br><br>
+<a href="#three">3. 접근제어자에 대해서 설명하세요</a><br><br>
+<a href="#four">4. OOP(Object Oriented Programming, 객체지향)의 4가지 특징에 대해 설명하시오</a><br><br>
+<a href="#five">5. OOP의 5대원칙</a><br><br>
+<a href="#six">6. JVM 에대해 설명하시오</a><br><br>
+<a href="#seven">7. 클래스 객체 인스턴스 차이</a><br><br>
+<a href="#eight">8. interface 와 abstract class 차이</a><br><br>
+<a href="#nine">9.  CheckedException과 UnCheckedException의 차이를 설명해주세요.</a><br><br>
+<a href="#ten">10.  Call by Reference와 Call by Value의 차이를 설명해주세요.</a><br><br>
+<a href="#oone">11.  가비지 컬렉션(Garbage Collection)에 대해 설명해주세요. </a><br><br>
+<a href="#otwo">12. java Map 인터페이스 구현체의 종류에대해 설명해주세요.</a><br><br>
+
+<br><br><br><br>
+<hr>
+<a name="zero"><b>0. Java의 특징을 설명해주세요 </b></a>
 <hr>
 <ul>
   <li>Java는 객체지향 프로그래밍언어입니다 </li>
@@ -21,7 +36,7 @@
 <hr>
 
 
-<b>1. 컴파일</b><br>
+<a name="one"><b>1. 컴파일</b><br></a>
 <hr>
 <h4>컴파일 과정</h4>
 <ul>
@@ -61,8 +76,9 @@
 🤚 <br>
 인터프리터는 고레벨 언어를 바로 기계어로 번역하지 않고 중간 형태로 변환시킨 후 실행합니다.
 반면 컴파일러는 고레벨 언어를 바로 기계어로 변환합니다.
+
 <hr>
-<b>2. String, StringBuffer, StringBuilder의 차이 </b>
+<a name="two"><b>2. String, StringBuffer, StringBuilder의 차이 </b></a>
 <hr>
 <ul>
   <li>String은 불변속성이지만, StringBuffer와 StringBuilder는 가변의 속성을 가집니다</li>
@@ -78,8 +94,9 @@ String 클래스는 불변하기 때문에 문자열을 수정하는 시점에 <
 (String 또한 불변이기에 여러개의 thread가 불변객체에 접근해서 수정하려해도 수정이 불가능하기때문에 멀티쓰레드 환경에서 안정성이 있습니다)
 StringBuilder는 동기화를 지원하지않아 멀티쓰레드 환경에서는 적합하지 않지만, 단일쓰레드에서의 성능은 StringBuffer보다 뛰어납니다
 </pre>
+
 <hr>
-<b>3. 접근제어자에 대해서 설명하세요</b>
+<a name="three"><b>3. 접근제어자에 대해서 설명하세요</b></a>
 <hr>
 <ul>
   <li>변수 또는 메소드의 접근 범위를 설정해주기 위해서 사용하는 Java의 예약어를 의미하며, 총 4가지 종류가 있습니다</li>
@@ -88,8 +105,9 @@ StringBuilder는 동기화를 지원하지않아 멀티쓰레드 환경에서는
   <li><b>(default는 생략이 가능합니다)</b> - 해당 패키지 내에서만 접근 가능합니다</li>
   <li><b>private</b> - 해당 클래스에서만 접근 가능합니다</li>
 </ul>  
+
 <hr>
-<b>4. OOP(Object Oriented Programming, 객체지향)의 4가지 특징에 대해 설명하시오</b>
+<a name="four"><b>4. OOP(Object Oriented Programming, 객체지향)의 4가지 특징에 대해 설명하시오</b></a>
 <hr>
 <ul>
   <li>캡슐화</li>
@@ -128,8 +146,9 @@ StringBuilder는 동기화를 지원하지않아 멀티쓰레드 환경에서는
 오버라이딩(Overriding) 은 상위 클래스가 가지고 있는 메서드를 하위 클래스가 재정의해서 사용하는 기술이고,
 오버로딩(Overloading) 은 이름의 메서드 여러개를 가지면서 매개변수의 유형과 개수가 다르도록 하는 기술입니다
 </pre>
+
 <hr>
-<b>5. OOP의 5대원칙</b>
+<a name="five"><b>5. OOP의 5대원칙</b></a>
 <hr>
 "SOLID"원칙
 <ul>
@@ -146,8 +165,9 @@ StringBuilder는 동기화를 지원하지않아 멀티쓰레드 환경에서는
   <li><b>DIP</b> - 의존 역전 원칙</li>
   <p>의존 관계를 맺을 때 변화하기 쉬운 것 또는 자주 변화하는 것보다는 변화하기 어려운 것, 거의 변화가 없는 것에 의존하라는 것 입니다.</p>
 </ul>
+
 <hr>
-<b>6. JVM 에대해 설명하시오</b>
+<a name="six"><b>6. JVM 에대해 설명하시오</b></a>
 <hr>
 <pre>
 JVM 이란?
@@ -162,7 +182,7 @@ Java와 OS사이의 중개자 역할 그리고 가장 중요한 메모리 관리
 </pre>
 
 <hr>
-<b>7. 클래스 객체 인스턴스 차이</b> 
+<a name="seven"><b>7. 클래스 객체 인스턴스 차이</b></a>
 <ul>
   <li>클래스</li>
   <ul>
@@ -188,7 +208,7 @@ Java와 OS사이의 중개자 역할 그리고 가장 중요한 메모리 관리
 </ul>
 
 <hr>
-<b>8. interface 와 abstract class 차이</b>
+<a name="eight"><b>8. interface 와 abstract class 차이</b></a>
 <hr>
 <pre>
 추상 클래스는 클래스 내 추상 메소드가 하나 이상 포함되거나 abstract로 정의된 경우를 말하고,
@@ -207,7 +227,7 @@ new 연산자로 인스턴스 생성 불가능
 </hr>
 
 <hr>
-<b>9.  CheckedException과 UnCheckedException의 차이를 설명해주세요. </b>
+<a name="nine"><b>9.  CheckedException과 UnCheckedException의 차이를 설명해주세요. </b></a>
 <hr>
 <h5>CheckedException 이란?</h5>
 <pre>
@@ -223,7 +243,7 @@ catch문으로 예외를 잡거나, throws로 예외를 자신을 호출한 클�
 </pre>
 
 <hr>
-<b>10.  Call by Reference와 Call by Value의 차이를 설명해주세요. </b>
+<a name="ten"><b>10.  Call by Reference와 Call by Value의 차이를 설명해주세요. </b></a>
 <hr>
 <ul>
   <li>
@@ -254,7 +274,7 @@ catch문으로 예외를 잡거나, throws로 예외를 자신을 호출한 클�
 
 
 <hr>
-<b>11.  가비지 컬렉션(Garbage Collection)에 대해 설명해주세요. </b>
+<a name="oone"><b>11.  가비지 컬렉션(Garbage Collection)에 대해 설명해주세요. </b></a>
 <hr>
 <h5>가비지 컬렉션은</h5>
 <pre>
@@ -265,6 +285,46 @@ GC의 작업을 수행하기 위해 JVM이 어플리케이션의 실행을 잠�
 GC를 실행하는 쓰레드를 제외한 모든 쓰레드들의 작업을 중단 후 (Stop The World 과정) 
 사용하지 않는 메모리를 제거(Mark and Sweep 과정)하고 작업이 재개됩니다.
 </pre>
+
+<hr>
+<a name="otwo"><b>12. java Map 인터페이스 구현체의 종류에대해 설명해주세요. </b></a>
+<hr>
+<h5>HashMap</h5>
+<ul>
+  <li>key와 value에 null을 허용합니다</li>
+  <li>동기화를 보장하지 않습니다</li>
+</ul>  
+  <pre>
+  HashMap은 쓰레드가 안전하지 않아, 싱글 쓰레드 환경에서 사용하는 게 좋습니다. 
+  한편, 동기화 처리를 하지 않기 때문에 데이터를 탐색하는 속도가 빠릅니다.
+  결국 HashTable과 ConcurrentHashMap보다 데이터를 찾는 속도는 빠르지만, 신뢰성과 안정성이 떨어집니다.
+  </pre>
+
+
+<h5>HashTable</h5>
+<ul>
+  <li>key와 value에 null을 허용하지 않습니다</li>
+  <li>동기화를 보장합니다</li>
+</ul>  
+  <pre>
+  HashTable은 쓰레드가 안전하기 때문에, 멀티 쓰레드 환경에서 사용할 수 있습니다. 
+  이는 데이터를 다루는 메소드에 synchronized 키워드가 붙어 있습니다 해당 키워드는 메소드를 호출하기 전에 쓰레드간 동기화 락을 겁니다. 
+  그래서 멀티 쓰레드 환경에서도 데이터의 무결성을 보장합니다. 그러나, 쓰레드간 동기화 락은 매우 느리게 동작한다는 단점이 있습니다.
+  </pre>
+
+
+<h5>ConcurrentHashMap</h5>
+<ul>
+  <li>key와 value에 null을 허용하지 않습니다</li>
+  <li>동기화를 보장합니다</li>
+</ul>  
+<pre>
+ConcurrentHashMap은 쓰레드가 안전하기 때문에, 멀티 쓰레드 환경에서 사용할 수 있다. 
+이 구현체는 HashMap의 동기화 문제를 보완하기 위해 도입됬습니다. 
+동기화 처리를 할 때, 어떤 Entry를 조작하는 경우에 해당 Entry에 대해서만 락을 겁니다. 
+그래서 HashTable보다 데이터를 다루는 속도가 빠릅니다. 즉, Entry 아이템별로 락을 걸어 멀티 쓰레드 환경에서의 성능을 향상시킵니다.
+</pre>
+
 
 
 
