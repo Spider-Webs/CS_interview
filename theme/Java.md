@@ -15,6 +15,8 @@
 <a href="#otwo">12. java Map 인터페이스 구현체의 종류에대해 설명해주세요.</a><br><br>
 <a href="#othree">13. 불변 객체가 무엇인지 설명하고 대표적인 Java의 예시를 설명해주세요. </a><br><br>
 <a href="#ofour">14. String이 불변객체인 이유에대해서 설명해주세요 </a><br><br>
+<a href="#ofive">15.new String 과 ""(리터럴)의 차이에 대해 설명해주세요 </a><br><br>
+
 
 
 
@@ -393,8 +395,20 @@ ConcurrentHashMap은 HashMap의 동기화 문제를 보완하기 위해 도입�
 </ol>
 
 <hr>
+<a name="ofive"><b>15.new String 과 ""(리터럴)의 차이에 대해 설명해주세요 </b></a>
+<hr>
+<pre>
+리터럴을 사용하게 되면 string constant pool 이라는 영역에 존재하게 되고 new를 통해 String을 생성하면 Heap 영역에 존재하게 됩니다
+String을 리터럴로 선언할 경우 내부적으로 String의 intern() 메서드가 호출되는데
+intern() 메서드는 주어진 문자열이 string constant pool에 존재하는지 검색하고 있다면 
+그 주소 값을 반환하고 없다면 string constant pool에 넣고 새로운 주소값을 반환 합니다
+</pre>
+
+<hr>
 <h2>참조</h2>
 <h3><a href="https://www.youtube.com/channel/UCHFz--glnVVP1xBLA-8kltg">인큐티비 - 유튜브</a>
 <h3><a href="https://dev-coco.tistory.com">슬기로운 개발 생활 - 블로그</a></h3>
 <h3><a href="https://velog.io/@sungsuzi/oop%EC%9D%98-4%EA%B0%80%EC%A7%80-%ED%8A%B9%EC%A7%95">suzi_911.log - 블로그</a></h3>
+<h3><a href="https://jackjeong.tistory.com/">잭코딩 - 블로그</a></h3>
+  
 
