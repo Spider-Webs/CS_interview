@@ -434,6 +434,12 @@ intern() 메서드는 주어진 문자열이 string constant pool에 존재하�
 프레임워크나 IDE에서 이런 동적인 바인딩을 이용한 기능을 제공합니다. intelliJ의 자동완성 기능, 
 스프링의 어노테이션이 리플렉션을 이용한 기능이라 할 수 있습니다.
 </pre>
+
+
+프레임워크랑 라이브러리차이 
+== equals
+
+
 <hr>
 <h2>참조</h2>
 <h3><a href="https://www.youtube.com/channel/UCHFz--glnVVP1xBLA-8kltg">인큐티비 - 유튜브</a>
