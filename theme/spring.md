@@ -1,7 +1,7 @@
 <h2>스프링 기술 면접</h2>
 <hr>
 <a href="#zero">0. Spring Framework에 대해 설명해주세요.</a><br><br>
-<a href="#one">1. 1. Spring Boot와 Spring Framework의 차이점을 설명해주세요.</a><br><br>
+<a href="#one"> 1. Spring Boot와 Spring Framework의 차이점을 설명해주세요.</a><br><br>
 
 <br><br><br><br>
 <hr>
