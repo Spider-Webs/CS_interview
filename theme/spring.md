@@ -4,6 +4,7 @@
   <h5><a href="#zero"><li>Spring Framework에 대해 설명해주세요.</li></a></h5>
   <h5><a href="#one"><li> Spring Boot와 Spring Framework의 차이점을 설명해주세요.</li></a></h5>
   <h5><a href="#two"><li> Spring MVC에 대해 설명해주세요.</li></a></h5>
+  <h5><a href="#three"><li> MVC는 어떠한 흐름으로 요청을 처리하는지 설명해주세요..</li></a></h5>
 </ol>
 
 
@@ -62,6 +63,26 @@ spring boot starter dependency만 추가해주면 설정은 끝나고, 내장된
 </li>
 </ul> 
 
+<hr>
+<a name="three"><b>3.  MVC는 어떠한 흐름으로 요청을 처리하는지 설명해주세요.</b></a>
+<hr>
+<img src="https://user-images.githubusercontent.com/105139722/174419404-a99d8876-6b6a-4f70-a3c1-01b7803da10e.png">
+<b>DispatcherServlet</b> : 클라이언트에게 요청을 받아 응답까지의 MVC 처리과정을 통제한다.<br>
+<b>HandlerMapping</b> : 클라이언트의 요청 URL을 어떤 Controller가 처리할지 결정한다.<br>
+<b>HandlerAdapter</b> : HandlerMapping에서 결정된 핸들러 정보로 해당 메소드를 직접 호출해주는 역할을 한다.<br>
+<b>ViewResolver</b> : Controller의 처리 결과(데이터)를 생성할 view를 결정한다.<br>
+<br>
+
+<ol>
+  <li>클라이언트는 URL을 통해 요청을 전송한다.</li>
+  <li>디스패처 서블릿은 핸들러 매핑을 통해 해당 요청이 어느 컨트롤러에게 온 요청인지 찾는다.</li>
+  <li>디스패처 서블릿은 핸들러 어댑터에게 요청의 전달을 맡긴다.</li>
+  <li>핸들러 어댑터는 해당 컨트롤러에 요청을 전달한다.</li>
+  <li>컨트롤러는 비즈니스 로직을 처리한 후에 반환할 뷰의 이름을 반환한다.</li>
+  <li> 디스패처 서블릿은 뷰 리졸버를 통해 반환할 뷰를 찾는다.</li>
+  <li>디스패처 서블릿은 컨트롤러에서 뷰에 전달할 데이터를 추가한다</li>
+  <li>데이터가 추가된 뷰를 반환한다.</li>
+</ol>  
 
 
 
