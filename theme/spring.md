@@ -1,9 +1,13 @@
 <h2>스프링 기술 면접</h2>
 <hr>
-<a href="#zero">0. Spring Framework에 대해 설명해주세요.</a><br><br>
-<a href="#one"> 1. Spring Boot와 Spring Framework의 차이점을 설명해주세요.</a><br><br>
+<ol>
+  <h5><a href="#zero"><li>Spring Framework에 대해 설명해주세요.</li></a></h5>
+  <h5><a href="#one"><li> Spring Boot와 Spring Framework의 차이점을 설명해주세요.</li></a></h5>
+  <h5><a href="#two"><li> Spring MVC에 대해 설명해주세요.</li></a></h5>
+</ol>
 
-<br><br><br><br>
+
+
 <hr>
 <a name="zero"><b>0. Spring Framework에 대해 설명해주세요.</b></a>
 <hr>
@@ -45,7 +49,18 @@ Spring Boot는 설정의 많은 부분을 자동화하여 사용자가 편하게
 spring boot starter dependency만 추가해주면 설정은 끝나고, 내장된 톰캣을 제공해 서버를 바로 실행할 수 있습니다.
 </pre>
 
-
+<hr>
+<a name="two"><b>2. Spring MVC에 대해 설명해주세요.</b></a>
+<hr>
+<ul>
+  <li>MVC는 Model, View, Controller의 약자이며, 각  기능을 구분하는데 중점을 둔 디자인 패턴입니다.</li>
+  <li>Model은 데이터 관리 및 비즈니스 로직을 처리하는 부분이며, (DAO, DTO, Service 등)</li>
+  <li>View는 비즈니스 로직의 처리 결과를 통해 유저 인터페이스가 표현되는 구간입니다. 
+    <br>(html, jsp, tymeleaf, mustache 등 화면을 구성하기도 하고, Rest API로 서버가 구현된다면 json 응답으로 구성되기도 한다.)</li>
+  <li>Controller는 사용자의 요청을 처리하고 Model과 View를 중개하는 역할을 합니다. 
+    <br>Model과 View는 서로 연결되어 있지 않기 때문에 Controller가 사이에서 통신 매체가 되어줍니다.
+</li>
+</ul> 
 
 
 
