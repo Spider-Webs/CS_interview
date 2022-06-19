@@ -96,7 +96,7 @@ spring boot starter dependency만 추가해주면 설정은 끝나고, 내장된
         객체의 생성에서부터 생명주기의 관리까지 모든 객체에 대한 제어권이 바뀌는 것을 의미합니다
       </li>
       <li>
-        컴포넌트 의존관계 설정(Component dependency resoulution), 설정(Configuration) 및 생명주기(LifeCycle)을 
+        컴포넌트 의존관계 설정(Component dependency resoulution)과 설정(Configuration) 및 생명주기(LifeCycle)을 
         해결하기 위한 디자인 패턴(Design Pattern)입니다.
       </li>
     </ul>
