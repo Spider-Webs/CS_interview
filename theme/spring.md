@@ -4,7 +4,8 @@
   <h5><a href="#zero"><li>Spring Framework에 대해 설명해주세요.</li></a></h5>
   <h5><a href="#one"><li> Spring Boot와 Spring Framework의 차이점을 설명해주세요.</li></a></h5>
   <h5><a href="#two"><li> Spring MVC에 대해 설명해주세요.</li></a></h5>
-  <h5><a href="#three"><li> MVC는 어떠한 흐름으로 요청을 처리하는지 설명해주세요..</li></a></h5>
+  <h5><a href="#three"><li> MVC는 어떠한 흐름으로 요청을 처리하는지 설명해주세요.</li></a></h5>
+  <h5><a href="#four"><li> 제어의 역전(IoC)에 대해 설명해주세요.</li></a></h5>
 </ol>
 
 <br><br>
@@ -84,8 +85,63 @@ spring boot starter dependency만 추가해주면 설정은 끝나고, 내장된
   <li>데이터가 추가된 뷰를 반환한다.</li>
 </ol>  
 
-
-
+<hr>
+<a name="four"><b>4.제어의 역전(IoC)에 대해 설명해주세요.</b></a>
+<hr>
+<ul>
+  <li>
+    <h5>IoC(제어의 역전)란</h5>
+    <ul>
+      <li>
+        객체의 생성에서부터 생명주기의 관리까지 모든 객체에 대한 제어권이 바뀌는 것을 의미합니다
+      </li>
+      <li>
+        컴포넌트 의존관계 설정(Component dependency resoulution), 설정(Configuration) 및 생명주기(LifeCycle)을 
+        해결하기 위한 디자인 패턴(Design Pattern)입니다.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h5>Spring에서의 IoC</h5>
+    <pre>
+    스프링 프레임워크도 객체를 생성하고 관리하고 책임지고 의존성을 관리해주는 컨테이너가 있는데,
+    바로 IoC 컨테이너(=스프링 컨테이너) 입니다.
+    <b>
+    <ul>
+      <li>인스턴스 생성부터 소멸까지의 인스턴스 생명주기 관리를 개발자가 아닌 컨테이너가 대신 해줍니다.</li>
+      <li>객체관리 주체가 프레임워크(Container)가 되기 때문에 개발자는 로직에 집중할 수 있는 장점이 있습니다.</li>
+      <li>POJO(Plain Old Java Object)의 생성, 초기화, 서비스, 소멸에 대한 권한을 가집니다</li>
+    </ul>
+    </b>
+    </pre>
+  </li>
+  <li>
+    IoC의 분류
+    <p>
+      <b>DL(Dependency Lookup) 과 DI (Dependency Injection)</b>
+    </p>
+       <ul>
+         <li>
+           <b>DL : </b>저장소에 저장되어 있는 Bean에 접근하기 위해 컨테이너가 제공하는 API를 이용하여 Bean을 Lookup하는 것 입니다
+         </li>
+         <li>
+           <b>DI : </b>각 클래스간의 의존관계를 빈 설정(Bean Definition) 정보를 바탕으로 컨테이너가 자동으로 연결해주는 것 입니다
+           <p>DI의 방법으로는</p>
+            <ul>
+              <li>
+                수정자 주입(Setter Injection)
+              </li>
+              <li>
+               생성자 주입(Constructor Injection)
+              </li>
+              <li>
+                필드 주입(Field Injection)
+              </li>
+            </ul>
+         </li>
+      </ul>
+  </li>
+</ul>
 
 
 
