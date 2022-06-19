@@ -111,6 +111,12 @@ spring boot starter dependency만 추가해주면 설정은 끝나고, 내장된
       <li>인스턴스 생성부터 소멸까지의 인스턴스 생명주기 관리를 개발자가 아닌 컨테이너가 대신 해줍니다.</li>
       <li>객체관리 주체가 프레임워크(Container)가 되기 때문에 개발자는 로직에 집중할 수 있는 장점이 있습니다.</li>
       <li>POJO(Plain Old Java Object)의 생성, 초기화, 서비스, 소멸에 대한 권한을 가집니다</li>
+<p>
+POJO(Plain Old Java Object)란? 
+주로 특정 자바 모델이나 기능, 프레임워크를 따르지 않는 Java Object를 지칭한다.
+Java Bean 객체가 대표적이다.
+간단하게 getter / setter 입니다.
+</p>
     </ul>
     </b>
     </pre>
