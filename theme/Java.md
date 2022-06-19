@@ -1,31 +1,32 @@
 <h2>자바 기술 면접</h2>
 <hr>
-<a href="#zero">0. Java의 특징을 설명해주세요</a><br><br>
-<a href="#one">1. 컴파일</a><br><br>
-<a href="#two">2. String, StringBuffer, StringBuilder의 차이 </a><br><br>
-<a href="#three">3. 접근제어자에 대해서 설명하세요</a><br><br>
-<a href="#four">4. OOP(Object Oriented Programming, 객체지향)의 4가지 특징에 대해 설명하시오</a><br><br>
-<a href="#five">5. OOP의 5대원칙</a><br><br>
-<a href="#six">6. JVM 에대해 설명하시오</a><br><br>
-<a href="#seven">7. 클래스 객체 인스턴스 차이</a><br><br>
-<a href="#eight">8. interface 와 abstract class 차이</a><br><br>
-<a href="#nine">9.  CheckedException과 UnCheckedException의 차이를 설명해주세요.</a><br><br>
-<a href="#ten">10.  Call by Reference와 Call by Value의 차이를 설명해주세요.</a><br><br>
-<a href="#oone">11.  가비지 컬렉션(Garbage Collection)에 대해 설명해주세요. </a><br><br>
-<a href="#otwo">12. java Map 인터페이스 구현체의 종류에대해 설명해주세요.</a><br><br>
-<a href="#othree">13. 불변 객체가 무엇인지 설명하고 대표적인 Java의 예시를 설명해주세요. </a><br><br>
-<a href="#ofour">14. String이 불변객체인 이유에대해서 설명해주세요 </a><br><br>
-<a href="#ofive">15.new String 과 ""(리터럴)의 차이에 대해 설명해주세요 </a><br><br>
-<a href="#osix">16. 제네릭에 대해 설명해주시고, 왜 쓰는지 알려주세요.  </a><br><br>
-<a href="#oseven">17. 리플렉션(Reflection)이란 무엇인지 설명해주세요 그리고 어떤 경우에 사용되는지 설명해주세요 </a><br><br>
-<a href="#oeight">18. ==와 equals()의 차이에 대해 설명해주세요 </a><br><br>
-<a href="#oeight">19.프레임워크랑 라이브러리차이에대해 설명해주세요</a><br><br>
+<ol>
+<h5><a href="#zero"><li> Java의 특징을 설명해주세요</li></a></h5>
+<h5><a href="#one"><li> 컴파일</li></a></h5>
+<h5><a href="#two"><li> String, StringBuffer, StringBuilder의 차이 </li></a></h5>
+<h5><a href="#three"><li> 접근제어자에 대해서 설명하세요</li></a></h5>
+<h5><a href="#four"><li> OOP(Object Oriented Programming, 객체지향)의 4가지 특징에 대해 설명하시오</li></a></h5>
+<h5><a href="#five"><li> OOP의 5대원칙</li></a></h5>
+<h5><a href="#six"><li> JVM 에대해 설명하시오</li></a></h5>
+<h5><a href="#seven"><li> 클래스 객체 인스턴스 차이</li></a></h5>
+<h5><a href="#eight"><li> interface 와 abstract class 차이</li></a></h5>
+<h5><a href="#nine"><li>  CheckedException과 UnCheckedException의 차이를 설명해주세요.</li></a></h5>
+<h5><a href="#ten"><li>  Call by Reference와 Call by Value의 차이를 설명해주세요.</li></a></h5>
+<h5><a href="#oone"><li> 가비지 컬렉션(Garbage Collection)에 대해 설명해주세요. </li></a></h5>
+<h5><a href="#otwo"><li> java Map 인터페이스 구현체의 종류에대해 설명해주세요.</li></a></h5>
+<h5><a href="#othree"><li>불변 객체가 무엇인지 설명하고 대표적인 Java의 예시를 설명해주세요. </li></a></h5>
+<h5><a href="#ofour"><li> String이 불변객체인 이유에대해서 설명해주세요 </li></a></h5>
+<h5><a href="#ofive"><li>.new String 과 ""(리터럴)의 차이에 대해 설명해주세요 </li></a></h5>
+<h5><a href="#osix"><li> 제네릭에 대해 설명해주시고, 왜 쓰는지 알려주세요.  </li></a></h5>
+<h5><a href="#oseven"><li> 리플렉션(Reflection)이란 무엇인지 설명해주세요 그리고 어떤 경우에 사용되는지 설명해주세요 </li></a></h5>
+<h5><a href="#oeight"><li> ==와 equals()의 차이에 대해 설명해주세요 </li></a></h5>
+<h5><a href="#oeight"><li> 프레임워크랑 라이브러리차이에대해 설명해주세요</li></a></h5>
+</ol>
 
 
 
 
-
-<br><br><br><br>
+<br><br>
 <hr>
 <a name="zero"><b>0. Java의 특징을 설명해주세요 </b></a>
 <hr>
