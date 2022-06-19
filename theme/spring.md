@@ -86,7 +86,7 @@ spring boot starter dependency만 추가해주면 설정은 끝나고, 내장된
 </ol>  
 
 <hr>
-<a name="four"><b>4.제어의 역전(IoC)에 대해 설명해주세요.</b></a>
+<a name="four"><b>4. 제어의 역전(IoC)에 대해 설명해주세요.</b></a>
 <hr>
 <ul>
   <li>
