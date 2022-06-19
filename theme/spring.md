@@ -7,6 +7,7 @@
   <h5><a href="#three"><li> MVC는 어떠한 흐름으로 요청을 처리하는지 설명해주세요.</li></a></h5>
   <h5><a href="#four"><li> 제어의 역전(IoC)에 대해 설명해주세요.</li></a></h5>
   <h5><a href="#five"><li> 의존성 주입(DI, Dependency Injection)에 대해 설명해주세요.</li></a></h5>
+  <h5><a href="#six"><li> DAO와 DTO의 차이에 대해 설명해주세요</li></a></h5>
 </ol>
 
 <br><br>
@@ -172,6 +173,45 @@ Java Bean 객체가 대표적이다.
 서로 순환되어 참조할 경우 발생하는 문제를 의미한다.
 </pre>
 
+<hr>
+<a name="six"><b>6. DAO와 DTO의 차이에 대해 설명해주세요</b></a>
+<hr>
+<ul>
+  <li>
+    <b>DAO(Data Access Object)란</b>
+    <ul>
+      <li>
+        DB의 데이터를 조회하거나 조작하는 기능을 전담하도록 만든 객체를 말합니다
+      </li>
+        <li>
+          DB에 접근을 하기위한 로직과 비즈니스 로직을 분리하기 위해서 사용 합니다
+      </li>
+    </ul>
+  </li>
+  
+  <li>
+    <b>DTO(Data Transfer Object)란</b>
+    <ul>
+      <li>
+        계층간 데이터 교환을 위한 자바빈즈를 말합니다.
+      </li>
+        <li>
+          일반적인 DTO는 로직을 갖고 있지 않는 순수한 데이터 객체이며, 속성과 그 속성에 접근하기 위한 getter, setter 메소드만 가진 클래스입니다
+      </li>
+    </ul>
+  </li>  
+  <li>
+    <b>VO (Value Object)란</b>
+      <ul>
+        <li>
+        실제 데이터만을 저장하는 객체를 말합니다.
+        </li>
+        <li>
+         오직 read만 가능하며 getter만 가능해야 합니다.
+        </li>
+      </ul>
+  </li> 
+</ul>
 
 
 <hr>
