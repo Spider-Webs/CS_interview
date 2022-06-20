@@ -240,20 +240,17 @@ AOP는 기능을 핵심 관심 사항(Core Concern)과 공통 관심 사항(Cros
 
 <h4>AOP의 특징</h4>
 <pre>
-<h5>프록시 패턴 기반</h5>
-- Spring은 타겟(Target) 객체에 대한 프록시를 만들어서 제공한다.
+<h5>프록시 패턴 기반</h5>- Spring은 타겟(Target) 객체에 대한 프록시를 만들어서 제공한다.
 - 타겟을 감싸는 프록시는 실행시간(RunTime)에 생성된다.
 - 프록시는 어드바이스(Advice)를 타겟 객체에 적용하면서 생성되는 객체
 - 프록시 객체를 쓰는 이유는 접근 제어 및 부가기능을 추가하기 위함이다.
 
-<h5>프록시가 호출을 가로챔(Intercept)</h5>
-- 프록시는 타겟 객체에 대한 호출을 가로챈 다음 Advice의 부가기능 로직을 수행하고난 후에 타겟의 핵심기능 로직을 호출한다.
+<h5>프록시가 호출을 가로챔(Intercept)</h5>- 프록시는 타겟 객체에 대한 호출을 가로챈 다음 Advice의 부가기능 로직을 수행하고난 후에 타겟의 핵심기능 로직을 호출한다.
 (전처리 어드바이스)
 - 타겟의 핵심기능 로직 메소드를 호출한 후에 부가기능을 수행하는 경우도 있다.
 (후처리 어드바이스)
 
-<h5>메소드 JoinPoint만 지원한다.</h5>
-- Spring은 동적 프록시를 기반으로 AOP를 구현하므로 메소드 조인 포인트만 지원
+<h5>메소드 JoinPoint만 지원한다.</h5>- Spring은 동적 프록시를 기반으로 AOP를 구현하므로 메소드 조인 포인트만 지원
 - 핵심기능(타겟)의 메소드가 호출되는 런타임 시점에만 부가기능(어드바이스)를 적용할 수 있음
 - 반면에 AseptJ같은 고급 AOP 프레임워크를 사용하면 객체의 생성, 필드값의 조회와 조작, static 메소드 호출 및 동기화 등의 
 다양한 작업에 부가기능을 적용할 수 있다.
@@ -262,27 +259,21 @@ AOP는 기능을 핵심 관심 사항(Core Concern)과 공통 관심 사항(Cros
 <h4>AOP의 주요 용어</h4>
 <pre>
 
-<h5>Aspect</h5>
-흩어진 관심사를 모듈화 한 것
+<h5>Aspect</h5>흩어진 관심사를 모듈화 한 것
 Advice + PointCut
 
-<h5>Target</h5>
-Aspect를 적용하는 곳(클래스, 메소드 등)
+<h5>Target</h5>Aspect를 적용하는 곳(클래스, 메소드 등)
 
-<h5>Advice</h5>
-실질적으로 수행해야 하는 기능을 담은 구현체
+<h5>Advice</h5>실질적으로 수행해야 하는 기능을 담은 구현체
 
-<h5>JoinPoint</h5>
-Advice가 적용될 위치
+<h5>JoinPoint</h5>Advice가 적용될 위치
 끼어들 수 있는 지점
 ex. 메소드 진입 시, 생성자 호출 시, 필드에서 값 꺼낼 때 등
 
-<h5>PointCut</h5>
-JoinPoint의 상세 스펙 정의
+<h5>PointCut</h5>JoinPoint의 상세 스펙 정의
 더욱 구체적으로 Advice가 실행될 지점 지정
 
-<h5>Weaving</h5>
-PointCut에 의해 결정된 Target의 JoinPoint에 Advice를 삽입하는 과정
+<h5>Weaving</h5>PointCut에 의해 결정된 Target의 JoinPoint에 Advice를 삽입하는 과정
 </pre>
 
 <hr>
