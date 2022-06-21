@@ -46,11 +46,7 @@
           <li>Local Cache에 비해 상대적으로 느리다 (네트워크 트래픽)</li>
           <li>별도의 Cache Server를 이용하기 때문에 서버 간 데이터 공유가 쉽다.</li>
      
-        </ul>  
-      </li>
-    </ul>
-  </li>  
-</ul>
+
 
 
 
