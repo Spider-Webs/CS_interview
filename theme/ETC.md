@@ -1,6 +1,7 @@
 
 <ol>
 <h5><a href="#zero"><li> Local Cache vs Global Cache 에대해 설명해주세요 </li></a></h5>
+<h5><a href="#one"><li> Redis vs Memcached 에대해 설명해주세요 </li></a></h5>
 </ol>
 
 
@@ -45,10 +46,15 @@
           <li>데이터를 분산하여 저장 할 수 있다</li>
           <li>Local Cache에 비해 상대적으로 느리다 (네트워크 트래픽)</li>
           <li>별도의 Cache Server를 이용하기 때문에 서버 간 데이터 공유가 쉽다.</li>
-     
-
-
-
+        </ul>  
+      </li>
+    </ul>
+  </li>
+  </ul>
+<hr>
+<a name="one"><b>1. Redis vs Memcached 에대해 설명해주세요  </b></a>
+<hr>
+<h3><a href="https://chrisjune-13837.medium.com/redis-vs-memcached-10e796ddd717"> Redis vs Memcached</a>
 
 
 <hr>
