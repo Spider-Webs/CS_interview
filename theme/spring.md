@@ -11,7 +11,9 @@
   <h5><a href="#seven"><li> AOP(관점지향프로그래밍)에대해 설명해주세요</li></a></h5>
   <h5><a href="#eight"><li> 스프링에서 빈(Bean)을 등록하는 방법에 대해 말해보세요</li></a></h5>
   <h5><a href="#nine"><li> Lombok 라이브러리에 대해 알고 있나요? 알고 있다면 롬복이 만드는 메소드들이 생성되는 시점은 언제인가요?</li></a></h5>
-  <h5><a href="#nine"><li> 대용량 트래픽에서 장애가 발생하면 어떻게 대응할 것인가요?</li></a></h5>
+  <h5><a href="#ten"><li> 대용량 트래픽에서 장애가 발생하면 어떻게 대응할 것인가요?</li></a></h5>
+  <h5><a href="#oone"><li> Filter와 Interceptor의 차이에대해 설명해주세요</li></a></h5>  
+  
 </ol>
 
 <br><br>
@@ -313,7 +315,7 @@ Lombok은 메소드를 컴파일 하는 과정에 개입해서 추가적인 코�
 </pre>
 
 <hr>
-<a name="nine"><b>11. 대용량 트래픽에서 장애가 발생하면 어떻게 대응할 것인가요?</b></a>
+<a name="ten"><b>11. 대용량 트래픽에서 장애가 발생하면 어떻게 대응할 것인가요?</b></a>
 <hr>
 <h5>스케일 업을 통해 하드웨어 스펙을 향상 / 스케일 아웃을 통해 서버를 여러대 추가해 시스템을 증가시킵니다</h5>
 <pre>
@@ -332,8 +334,70 @@ CPU나 RAM 등을 추가하거나 고성능의 부품, 서버로 교환하는 �
 <br>
 ※ 로드밸런싱이란?
 서버가 처리해야 할 업무 혹은 요청(Load)을 여러 대의 서버로 나누어(Balancing) 처리하는 것을 의미한다.
-
 </pre>
+
+
+<hr>
+<a name="oone"><b>12.Filter와 Interceptor의 차이에대해 설명해주세요</b></a>
+<hr>
+<h5>Filter와 Interceptor 공통점</h5>
+<ul>
+  <li>애플리케이션에서 자주 사용되는 기능을 분리하여 관리할 수 있도록 Spring이 제공하는 기능</li>
+</ul>  
+
+<h5>Filter, Interceptor의 흐름</h5>
+<img src="https://user-images.githubusercontent.com/105139722/175063326-8436b688-5253-4f19-bb27-cab90adb2ca5.png">
+
+<h5>Filter 특징</h5>
+<ul>
+  <li>Dispatcher Servlet 이전에 수행되고, 응답 처리에 대해서도 변경 및 조작 수행 가능합니다</li>
+  <li>WAS 구동 시 FilterMap이라는 배열에 등록되고, 실행 시 Filter chain을 구성하여 순차적으로 실행합니다</li>
+  <li>Spring Context 외부에 존재하여 Spring과 무관한 자원에 대해 동작합니다</li>
+  <li>예외 발생 시 Web Application에서 예외 처리를 합니다</li>
+  <li>
+    실행 메소드로는
+    <ul>
+      <li>init() : 필터 인스턴스 초기화</li>
+      <li>doFilter() : 실제 처리 로직</li>
+      <li>destroy() : 필터 인스턴스 종료</li>
+    </ul>  
+  </li>
+</ul>  
+<br>
+<h5>Interceptor 특징</h5>
+<ul>
+  <li>Dispatcher Servlet 이후 Controller 호출 전, 후에 끼어들어 기능 수행</li>
+  <li>Spring Context 내부에서 Controller의 요청과 응답에 관여하며 모든 Bean에 접근 가능</li>
+  <li>예외 발생 시 @ControllerAdvice에서 @ExceptionHandler를 사용해 예외 처리합니다</li>
+  <li>
+    실행 메소드로는
+    <ul>
+      <li>preHandler() : Controller 실행 전</li>
+      <li>postHandler() : Controller 실행 후</li>
+      <li>
+        afterCompletion() : view Rendering 후
+        <ul>
+          <li>렌더링이란 서버로부터 HTML 파일을 받아 브라우저에 뿌려주는 과정입니다</li>
+        </ul>
+      </li>
+    </ul>  
+  </li>
+</ul> 
+<br>
+<h5>Filter, Interceptor 차이점 요약</h5>
+<ul>
+  <li>Filter는 WAS단에 설정되어 Spring과 무관한 자원에 대해 동작하고, Interceptor는 Spring Context 내부에 설정되어 컨트롤러 접근 전, 후에 가로채서 기능 동작합니다</li>
+  <li>Filter는 doFilter() 메소드만 있지만, Interceptor는 pre와 post로 명확하게 분리합니다</li>
+  <li>Interceptor의 경우 AOP 흉내 가능합니다
+handlerMethod(@RequestMapping을 사용해 매핑 된 @Controller의 메소드)를 파라미터로 제공하여 메소드 시그니처 등 추가 정보를 파악해 로직 실행 여부 판단 가능합니다</li>
+</ul>  
+
+
+
+<hr>
+was란
+
+
 
 <hr>
 <h2>참조</h2>
