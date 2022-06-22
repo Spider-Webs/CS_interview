@@ -376,7 +376,9 @@ CPU나 RAM 등을 추가하거나 고성능의 부품, 서버로 교환하는 �
       <li>postHandler() : Controller 실행 후</li>
       <li>
         afterCompletion() : view Rendering 후
+        <br>
         <ul>
+          💡
           <li>렌더링이란 서버로부터 HTML 파일을 받아 브라우저에 뿌려주는 과정입니다</li>
         </ul>
       </li>
@@ -388,8 +390,13 @@ CPU나 RAM 등을 추가하거나 고성능의 부품, 서버로 교환하는 �
 <ul>
   <li>Filter는 WAS단에 설정되어 Spring과 무관한 자원에 대해 동작하고, Interceptor는 Spring Context 내부에 설정되어 컨트롤러 접근 전, 후에 가로채서 기능 동작합니다</li>
   <li>Filter는 doFilter() 메소드만 있지만, Interceptor는 pre와 post로 명확하게 분리합니다</li>
-  <li>Interceptor의 경우 AOP 흉내 가능합니다
-handlerMethod(@RequestMapping을 사용해 매핑 된 @Controller의 메소드)를 파라미터로 제공하여 메소드 시그니처 등 추가 정보를 파악해 로직 실행 여부 판단 가능합니다</li>
+  <li>Interceptor의 경우 AOP의 흉내가 가능합니다
+@RequestMapping을 사용해 매핑 된 @Controller의 메소드를 파라미터로 제공하여 메소드 시그니처 등 추가 정보를 파악해 로직 실행 여부 판단 가능합니다</li>
+  <br>
+    <ul>
+      💡
+        <li>메서드 시그니처는 메서드 명과 파라미터의 순서, 타입, 개수를 의미한다</li>
+    </ul>
 </ul>  
 
 
