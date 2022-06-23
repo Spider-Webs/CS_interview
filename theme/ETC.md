@@ -2,7 +2,7 @@
 <ol>
 <h5><a href="#zero"><li> Local Cache vs Global Cache 에대해 설명해주세요 </li></a></h5>
 <h5><a href="#one"><li> Redis vs Memcached 에대해 설명해주세요 </li></a></h5>
-<h5><a href="#two"><li> 쿠키와 세션, 토큰(JWT)에 대해  </li></a></h5>
+
 </ol>
 
 
@@ -58,11 +58,6 @@
 <a name="one"><b>1. Redis vs Memcached 에대해 설명해주세요  </b></a>
 <hr>
 <h3><a href="https://chrisjune-13837.medium.com/redis-vs-memcached-10e796ddd717"> Redis vs Memcached</a>
-
-<hr>
-<a name="two"><b>2. 쿠키와 세션, 토큰(JWT) 에대해 설명해주세요  </b></a>
-<hr>
-
 
   
   
