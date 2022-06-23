@@ -2,6 +2,7 @@
 <ol>
 <h5><a href="#zero"><li> Local Cache vs Global Cache 에대해 설명해주세요 </li></a></h5>
 <h5><a href="#one"><li> Redis vs Memcached 에대해 설명해주세요 </li></a></h5>
+<h5><a href="#two"><li> 쿠키와 세션, 토큰(JWT)에 대해  </li></a></h5>
 </ol>
 
 
@@ -39,6 +40,7 @@
           <li>Local에서만 작동되기 때문에 다른 서버와 데이터 공유가 어렵다</li>
         </ul>  
       </li>
+ 
       <li>
         <h5>Global Cache</h5>
         <ul>
@@ -50,13 +52,22 @@
       </li>
     </ul>
   </li>
-  </ul>
+</ul>
 <hr>
 <a name="one"><b>1. Redis vs Memcached 에대해 설명해주세요  </b></a>
 <hr>
 <h3><a href="https://chrisjune-13837.medium.com/redis-vs-memcached-10e796ddd717"> Redis vs Memcached</a>
 
+<hr>
+<a name="one"><b>2. 쿠키와 세션, 토큰(JWT) 에대해 설명해주세요  </b></a>
+<hr>
 
+<h5>HTTP 특성</h5>
+HTTP는  
+  
+  
+  
 <hr>
 <h2>참조</h2>
 <h3><a href="https://dev-jj.tistory.com/">제제의 개발 발자취 - 블로그</a>
+<h3><a href="https://velog.io/@whitebear/%EC%BF%A0%ED%82%A4-%EC%84%B8%EC%85%98-%ED%86%A0%ED%81%B0JWT-%ED%99%95%EC%8B%A4%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0">whitebear - 블로그</a>
