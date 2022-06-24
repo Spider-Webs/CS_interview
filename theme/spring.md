@@ -14,7 +14,9 @@
   <h5><a href="#ten"><li> 대용량 트래픽에서 장애가 발생하면 어떻게 대응할 것인가요?</li></a></h5>
   <h5><a href="#oone"><li> Filter와 Interceptor의 차이에대해 설명해주세요</li></a></h5>  
   <h5><a href="#otwo"><li> @Transactional의 동작 원리에 대해 설명해주세요.</li></a></h5>  
- 
+  <h5><a href="#othree"><li> JPA와 같은 ORM을 사용하면서 쿼리가 복잡해지는 경우에는 어떻게 해결하는게 좋을까요?</li></a></h5>  
+  <h5><a href="#ofour"><li>  JPA N + 1 문제와 발생하는 이유 그리고 해결하는 방법을 설명해주세요. </li></a></h5>  
+
 
 </ol>
 
@@ -414,8 +416,68 @@ AOP를 통해 Target이 상속하고 있는 인터페이스 또는 Target 객체
 Proxy 객체의 메소드를 호출하면 Target 메소드 전 후로 트랜잭션 처리를 수행합니다.
 </pre>
 
+<hr>
+<a name="othree"><b>14. JPA와 같은 ORM을 사용하면서 쿼리가 복잡해지는 경우에는 어떻게 해결하는게 좋을까요?</b></a>
+<hr>
+<pre>
+일단 JPA 자체는 정적인 상황에서 사용하는걸 권장하기 때문에 복잡한 쿼리와 동적인 쿼리에 대한 문제가 발생하게 되는데, 
+그럴때는 JPQL과 Querydsl을 사용할 것을 권장하고 있습니다.
+쿼리가 복잡해지는 경우엔 JPQL의 @Query 어노테이션으로 쿼리를 직접 정의하여 해결합니다.
+<ul>
+<li>
+💡ORM 이란?
+ORM은 객체와 관계형 데이터베이스 매핑의 줄임말이며, 
+OOP에서 쓰는 객체라는 개념을 구현한 클래스와 RDB에서 쓰이는 데이터 테이블을 매핑하는 것을 의미합니다.
+</li>
+</ul>
+</pre>
 
 
+<hr>
+<a name="ofour"><b>15.JPA N + 1 문제와 발생하는 이유 그리고 해결하는 방법을 설명해주세요.</b></a>
+<hr>
+<pre>
+N+1 문제는 1:N 또는 N:1 관계를 가진 엔티티를 조회할 때 발생되는데, 
+1번의 쿼리를 날렸을 때 의도하지 않은 N번의 쿼리가 추가적으로 실행되는 것을 의미합니다.
+ 
+해결 방법에는 여러 방법이 있지만 크게 Fetch Join을 사용해 해결하는 방법 과 Entity Graph를 사용하는 방법 입니다.
+</pre>
+<h5>Fetch Join</h5>
+<pre>
+N+1 자체가 발생하는 이유는 한쪽 테이블만 조회하고 연결된 다른 테이블은 따로 조회하기 때문입니다.
+미리 두 테이블을 JOIN 하여 한 번에 모든 데이터를 가져올 수 있다면 애초에 N+1 문제가 발생하지 않을 것입니다.
+그렇게 나온 해결 방법이 FetchJoin 방법입니다.
+두 테이블을 JOIN 하는 쿼리를 직접 작성하는 것입니다.
+기본적으로 Fetch join의 경우 inner join을 합니다
+
+단점은
+<ul>
+<li>쿼리 한번에 모든 데이터를 가져오기 때문에 JPA가 제공하는 Paging API 사용 불가능(Pageable 사용 불가)합니다</li>
+<li>1:N 관계가 두 개 이상인 경우 사용 불가합니다</li>
+<li>패치 조인 대상에게 별칭(as) 부여 불가능 등이 있습니다</li>
+</ul>
+</pre>
+
+<h5> Entity Graph 사용</h5>
+<pre>
+@EntityGraph 의 attributePaths는 같이 조회할 연관 엔티티명을 적으면 됩니다. ,(콤마)를 통해 여러 개를 줄 수도 있습니다.
+Fetch join과 동일하게 JPQL을 사용해 Query문을 작성하고 필요한 연관관계를 EntityGraph에 설정하면 됩니다.
+EntityGraph는 outer join을 기본으로 합니다.
+</pre>
+
+<h5>Fetch Join과 EntityGraph 사용시 주의할 점 </h5>
+<pre>
+FetchJoin과 EntityGraph는 공통적으로 카테시안 곱(Cartesian Product)이 발생 하여 중복이 생기게 됩니다.
+※ 카테시안 곱 : 두 테이블 사이에 유효 join 조건을 적지 않았을 때 
+해당 테이블에 대한 모든 데이터를 전부 결합하여 테이블에 존재하는 행 갯수를 곱한만큼의 결과 값이 반환되는 것
+
+
+해결방법으로는
+<ul>
+<li>JPQL에 DISTINCT 를 추가하여 중복을 제거하거나</li>
+<li>OneToMany 필드 타입을 Set으로 선언하여 중복을 제거하는 것입니다</li>
+</ul>
+</pre>
 
 
 
