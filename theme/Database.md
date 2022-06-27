@@ -2,7 +2,7 @@
 <hr>
 <ol>
   <h5><a href="#zero"><li>데이터베이스 풀 에대해 설명해주세요</li></a></h5>
-  <h5><a href="#one"><li>트리거에 </li></a></h5>
+  <h5><a href="#one"><li>트리거에 대해 설명해주세요 </li></a></h5>
 </ol>
 
 <br><br>
