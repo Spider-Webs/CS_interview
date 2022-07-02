@@ -8,7 +8,7 @@
   <h5><a href="#four"><li>이상 현상(Anomaly)이란? </li></a></h5>
  <h5><a href="#five"><li>정규화란? </li></a></h5>
   <h5><a href="#six"><li> RDBMS와 NoSQL의 차이에 대해 설명해주세요. </li></a></h5>
- 
+ <h5><a href="#seven"><li> 옵티마이저(Optimizer)에 대해 아는대로 말해주세요. </li></a></h5>
 </ol>
 
 <br><br>
@@ -246,6 +246,20 @@ BCNF 정규화란 제3 정규화를 진행한 테이블에 대해 모든 결정�
    </ul>
   </ul>
   
+  
+ <hr>
+<a name="seven"><b>7. 옵티마이저(Optimizer)에 대해 아는대로 말해주세요.</b></a>
+<hr>
+  <ul>
+    <li>
+      옵티마이저는 SQL을 가장 빠르고 효율적으로 수행할 최적의 처리 경로를 생성해주는 DBMS 내부의 핵심 엔진입니다.
+    </li>
+    <br>
+    <li>
+      컴퓨터의 두뇌가 CPU인 것처럼 DBMS의 두뇌는 옵티마이저라고 할 수 있습니다. 개발자가 SQL을 작성하고 실행하면 즉시 실행되는 것이 아니라 옵티마이저라는 곳에서 “이 쿼리문을 어떻게 실행시키겠다!”라는 여러가지 실행 계획을 세우고, 최고의 효율을 갖는 실행계획을 판별한 후 그 실행계획에 따라 쿼리를 수행하게 되는 것입니다.
+    </li>
+    
+  </ul>
 <hr>
 <h2>참조</h2>
 <h3><a href="https://www.youtube.com/channel/UCHFz--glnVVP1xBLA-8kltg">인큐티비 - 유튜브</a>
