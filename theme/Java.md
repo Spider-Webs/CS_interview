@@ -496,7 +496,7 @@ intern() 메서드는 주어진 문자열이 string constant pool에 존재하�
 <h5>API 란?</h5>
 <pre>
 API(Application Programming Interface)
-○ 직역하자만 응용 프로그램을 만드는데 사용되는 interface이다.  
+○ 직역하자면 응용 프로그램을 만드는데 사용되는 interface이다.  
 여기서 interface란 사물간, 사람간, 또는 사람과 사물간에 상호작용을 할 수 있도록 연결해주는 장치, 방법, 형식, 공간 등을 통칭한다<br>
 ○ Application Programming Interface 즉, API는 응용 프로그램을 만드는데 필요한 연결 장치, 매개체라고 할 수 있다. 
 이러한 연결 장치, 매개체가 필요한 이유는, 실제 개발을 할 때 혼자 모든 것을 개발할 수는 없기 때문이다.<br>
