@@ -707,7 +707,7 @@ replica는 또 다른 형태의 shard라고 할 수 있습니다.
     데이터 CURD 작업은 HTTP Restful API를 통해 수행하며, 각각 다음과 같이 대응합니다.
   </p>
   </ul>
- <h4>※Replication? database에서는 DB 처리의 효율화와 백업의 수단으로, 현대 데이터베이스 운영에 필수 불가결한 기술 중의 하나이다.</h4>
+ <h4>※Replication 이란? database에서는 DB 처리의 효율화와 백업의 수단으로, 현대 데이터베이스 운영에 필수 불가결한 기술 중의 하나이다.</h4>
 <hr>
 <h2>참조</h2>
 <h3><a href="https://www.youtube.com/channel/UCHFz--glnVVP1xBLA-8kltg">인큐티비 - 유튜브</a>
