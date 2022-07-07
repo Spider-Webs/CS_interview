@@ -12,6 +12,8 @@
   <h5><a href="#eight"><li> ORM에대해 설명해주세요 </li></a></h5>
   <h5><a href="#nine"><li>트랜잭션에대해 설명해주세요 </li></a></h5>
   <h5><a href="#ten"><li>트랜잭션 격리 수준에 대해 설명해주세요 </li></a></h5>
+  <h5><a href="#oone"><li>DB 락에 대해 설명해주세요. </li></a></h5>
+  <h5><a href="#otwo"><li>Elastic Search에 대해 설명해주세요. </li></a></h5>
 </ol>
 
 <br><br>
@@ -514,7 +516,9 @@ SELECT 문장이 수행되는 동안 해당 데이터에 Shared Lock이 걸리�
 트랜잭션이 수행되는 동안 다른 트랜잭션이 접근할 수 없어 대기하게 된다.
 Commit이 이루어진 트랜잭션만 조회할 수 있다.
 따라서, 어떤 사용자가 A라는 데이터를 B라는 데이터로 변경하는 동안 다른 사용자는 해당 데이터에 접근할 수 없다.
-SQL Server가 Default로 사용하는 Isolation Level        
+SQL Server가 Default로 사용하는 Isolation Level
+<br>
+※ Shared Lock 은 데이터를 변경하지 않는 읽기 명령에 대해 주어지는 락
         </pre>
       </li>
       <li>
@@ -572,8 +576,138 @@ SQL Server가 Default로 사용하는 Isolation Level
    </li>
   </ul>
   
+<hr>
+<a name="oone"><b>11. DB 락에 대해 설명해주세요.</b></a>
+<hr> 
+  <ul>
+    <li>DB Lock은 트랜잭션 처리의 순차성을 보장하기 위한 방법입니다.</li>
+    <li>공유락(LS, Shared Lock) Read Lock라고도 하는 공유락은 트랜잭션이 읽기를 할 때 사용하는 락이며, 데이터를 읽기만하기 때문에 같은 공유락 끼리는 동시에 접근이 가능합니다.</li>
+    <li>베타락(LX, Exclusive Lock) Write Lock라고도 하는 베타락은 데이터를 변경할 때 사용하는 락입니다. 트랜잭션이 완료될 때까지 유지되며, 베타락이 끝나기 전까지 어떠한 접근도 허용하지 않습니다.
+</li>
+  </ul>
   
+<hr>
+<a name="otwo"><b>11. Elasticsearch에 대해 설명해주세요.</b></a>
+<hr>  
+  <h3>1. Elasticsearch란?</h3>
+  <p>
+Elasticsearch는 Apache Lucene( 아파치 루씬 ) 기반의 Java 오픈소스 분산 검색 엔진입니다.<br>
+Elasticsearch를 통해 루씬 라이브러리를 단독으로 사용할 수 있게 되었으며, 방대한 양의 데이터를 신속하게, 거의 실시간( NRT, Near Real Time )으로 저장, 검색, 분석할 수 있습니다.
+  </p>
+<br>
+  <p>
+    Elasticsearch는 검색을 위해 단독으로 사용되기도 하며, ELK( Elasticsearch / Logstatsh / Kibana )스택으로 사용되기도 합니다.
+ELK 스택이란 다음과 같습니다.
+  </p>
+  <ul>
+    <li><b>Logstash</b></li>
+    <p>
+      다양한 소스( DB, csv파일 등 )의 로그 또는 트랜잭션 데이터를 수집, 집계, 파싱하여 Elasticsearch로 전달
+    </p>
+    <li><b>Elasticsearch</b></li>
+    <p>
+      Logstash로부터 받은 데이터를 검색 및 집계를 하여 필요한 관심 있는 정보를 획득
+    </p>
+    <li><b>Kibana</b></li>
+    <p>
+      Elasticsearch의 빠른 검색을 통해 데이터를 시각화 및 모니터링
+    </p>
+    <li>주로 ELK는 로드밸런싱되어 있는 WAS의 흩어져 있는 로그를 한 곳으로 모으고, 원하는 데이터를 빠르게 검색한 뒤 시각화하여 모니터링하기 위해 사용한다.</li>
+  </ul>
   
+  <h3>2. Elasticsearch 아키텍쳐 / 용어 정리</h3>
+  <ul>
+    <li><b> 클러스터( cluseter )</b></li>
+    <p>
+클러스터란 Elasticsearch에서 가장 큰 시스템 단위를 의미하며, 최소 하나 이상의 노드로 이루어진 노드들의 집합입니다.
+서로 다른 클러스터는 데이터의 접근, 교환을 할 수 없는 독립적인 시스템으로 유지되며,
+여러 대의 서버가 하나의 클러스터를 구성할 수 있고, 한 서버에 여러 개의 클러스터가 존재할수도 있습니다.
+    </p>
+    <br>
+    <li><b>노드( node )</b></li>
+    <p>
+Elasticsearch를 구성하는 하나의 단위 프로세스를 의미합니다.
+그 역할에 따라 Master-eligible, Data, Ingest, Tribe 노드로 구분할 수 있습니다.
+  <ul>
+    <li>
+      master-eligible node ( 링크 )
+    </li>
+    <pre>
+클러스터를 제어하는 마스터로 선택할 수 있는 노드를 말합니다.
+여기서 master 노드가 하는 역할은 다음과 같습니다.
+
+인덱스 생성, 삭제
+클러스더 노드들의 추적, 관리
+데이터 입력 시 어느 샤드에 할당할 것인지
+    </pre>
+     <li>
+      Data node ( 링크 )
+    </li>
+    <pre>
+데이터와 관련된 CRUD 작업과 관련있는 노드입니다.
+이 노드는 CPU, 메모리 등 자원을 많이 소모하므로 모니터링이 필요하며, master 노드와 분리되는 것이 좋습니다.
+    </pre>
+     <li>
+      Ingest node ( 링크 )
+    </li>
+    <pre>
+    데이터를 변환하는 등 사전 처리 파이프라인을 실행하는 역할을 합니다.
+    </pre>
+    <li>
+      Coordination only node ( 링크 )
+    </li>
+    <pre>
+data node와 master-eligible node의 일을 대신하는 이 노드는 대규모 클러스터에서 큰 이점이 있습니다.
+즉 로드밸런서와 비슷한 역할을 한다고 보시면 됩니다.
+    </pre>
+  </ul>
+    </p>
+    <li><b>인덱스( index ) / 샤드( Shard ) / 복제( Replica )</b></li>
+  <pre>
+Elasticsearch에서 index는 RDBMS에서 database와 대응하는 개념입니다.
+
+또한 shard와 replica는 Elasticsearch에만 존재하는 개념이 아니라, 분산 데이터베이스 시스템에도 존재하는 개념입니다.
+
+
+
+샤딩( sharding )은 데이터를 분산해서 저장하는 방법을 의미합니다.
+
+즉, Elasticsearch에서 스케일 아웃을 위해 index를 여러 shard로 쪼갠 것입니다.
+
+기본적으로 1개가 존재하며, 검색 성능 향상을 위해 클러스터의 샤드 갯수를 조정하는 튜닝을 하기도 합니다.
+
+
+
+replica는 또 다른 형태의 shard라고 할 수 있습니다.
+
+노드를 손실했을 경우 데이터의 신뢰성을 위해 샤드들을 복제하는 것이죠.
+
+따라서 replica는 서로 다른 노드에 존재할 것을 권장합니다.
+
+아래 사진에서 보는 바와 같이 Replica1은 Node2에 존재하는 것을 확인할 수 있습니다.
+  </pre>
+  </ul>
+  
+  <h3>3. Elasticsearch 특징</h3>
+  <ul>
+  <li>Scale out</li>
+  <p>
+    샤드를 통해 규모가 수평적으로 늘어날 수 있음
+  </p>
+  <li>고가용성</li>
+    <p>
+    Replica를 통해 데이터의 안정성을 보장
+  </p>
+  <li>Schema Free</li>
+    <p>
+    Json 문서를 통해 데이터 검색을 수행하므로 스키마 개념이 없음
+  </p>
+  <li>Restful</li>
+    <p>
+    데이터 CURD 작업은 HTTP Restful API를 통해 수행하며, 각각 다음과 같이 대응합니다.
+  </p>
+  </ul>
+ <h4>※Replication? database에서는 DB 처리의 효율화와 백업의 수단으로, 현대 데이터베이스 운영에 필수 불가결한 기술 중의 하나이다.</h4>
 <hr>
 <h2>참조</h2>
 <h3><a href="https://www.youtube.com/channel/UCHFz--glnVVP1xBLA-8kltg">인큐티비 - 유튜브</a>
