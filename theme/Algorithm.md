@@ -2,6 +2,9 @@
 <h5><a href="#zero"><li>동적 계획법(DP, Dynamic Programming)에 대해 설명해주세요.</li></a></h5>
 <h5><a href="#one"><li>버블 정렬(Bubble Sort)에 대해 설명해주세요.</li></a></h5>
 <h5><a href="#two"><li>선택 정렬(Selection Sort)에 대해 설명해주세요.</li></a></h5>
+<h5><a href="#three"><li>삽입 정렬(Injection Sort)에 대해 설명해주세요.</li></a></h5>
+<h5><a href="#four"><li>힙 정렬(Heap Sort)에 대해 설명해주세요.</li></a></h5>
+<h5><a href="#five"><li>병합 정렬(Merge Sort)에 대해 설명해주세요.</li></a></h5>
 </ol>
 
 
@@ -44,3 +47,30 @@
 </p>
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FQ4cCJ%2FbtrugRai7Eu%2FRRRuKTk5SmtWwwHtukI321%2Fimg.png">
 
+<hr>
+<a name="three"><b>3. 삽입 정렬(Injection Sort)에 대해 설명해주세요.</b></a>
+<hr>
+<p>
+삽입 정렬은 두 번째 값부터 시작해 그 앞에 존재하는 원소들과 비교하여 삽입할 위치를 찾아 삽입하는 정렬 알고리즘입니다.
+평균 시간복잡도는 O(n^2)이며, Best Case 의 경우 O(n)까지 높아질 수 있습니다.
+</p>
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdbxIDl%2FbtrubguAkll%2F0uQYXB6AN4pJFHgz02DyJ0%2Fimg.png">
+
+<hr>
+<a name="four"><b>4. 힙 정렬(Heap Sort)에 대해 설명해주세요.</b></a>
+<hr>
+<p>
+힙 정렬은 주어진 데이터를 힙 자료구조로 만들어 최댓값 또는 최솟값부터 하나씩 꺼내서 정렬하는 알고리즘입니다.
+힙 정렬이 가장 유용한 경우는 전체를 정렬하는 것이 아니라 가장 큰 값 몇개만을 필요로 하는 경우입니다.
+시간 복잡도는 O(nlogn)입니다.
+</p>
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbGaV5K%2FbtrugQh7CfC%2Fy8fnz09GeGdx2rSxjtkSU0%2Fimg.png">
+
+<hr>
+<a name="five"><b>5. 병합 정렬(Merge Sort)에 대해 설명해주세요.</b></a>
+<hr>
+<p>
+병합 정렬은 주어진 배열을 크기가 1인 배열로 분할하고 합병하면서 정렬을 진행하는 분할/정복 알고리즘입니다.
+시간 복잡도는 O(nlogn)입니다.  
+</p>
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcCXDyt%2FbtruiTyKGcq%2FdwTYHpkXN8eM5SHkqrg9UK%2Fimg.png">
