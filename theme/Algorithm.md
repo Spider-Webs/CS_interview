@@ -5,6 +5,9 @@
 <h5><a href="#three"><li>삽입 정렬(Injection Sort)에 대해 설명해주세요.</li></a></h5>
 <h5><a href="#four"><li>힙 정렬(Heap Sort)에 대해 설명해주세요.</li></a></h5>
 <h5><a href="#five"><li>병합 정렬(Merge Sort)에 대해 설명해주세요.</li></a></h5>
+<h5><a href="#six"><li>퀵 정렬(Quick Sort)에 대해 설명해주세요.</li></a></h5>
+<h5><a href="#seven"><li>허프만 코딩에 대해 설명해주세요.</li></a></h5> 
+<h5><a href="#eight"><li>재귀 알고리즘에 대해 설명해주세요.</li></a></h5> 
 </ol>
 
 
@@ -74,3 +77,33 @@
 시간 복잡도는 O(nlogn)입니다.  
 </p>
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcCXDyt%2FbtruiTyKGcq%2FdwTYHpkXN8eM5SHkqrg9UK%2Fimg.png">
+
+
+<hr>
+<a name="six"><b>6. 퀵 정렬(Quick Sort)에 대해 설명해주세요.</b></a>
+<hr>
+<p>
+퀵 정렬은 빠른 정렬 속도를 자랑하는 분할 정복 알고리즘 중 하나로 피봇을 설정하고 피봇보다 큰 값과 작은 값으로 분할하여 정렬 합니다. 
+병합정렬과 달리 리스트를 비균등하게 분할합니다.
+시간 복잡도는 O(nlogn)이며 worst case 경우 O(n^2)까지 나빠질 수 있습니다.
+</p>
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdvuyQs%2FbtruqGdjHQc%2F1rci2y82EK94fRZMrolLwK%2Fimg.jpg">
+
+<hr>
+<a name="seven"><b>7. 허프만 코딩에 대해 설명해주세요.</b></a>
+<hr>
+<p>
+허프만 코딩은 문자의 빈도 수를 가지고 압축하는 과정을 말하며, 접두부 코드와 최적 코드를 사용합니다.
+</p>
+<ul>
+  <li>접두부 코드 : 각 문자에 부여된 이진 코드가 다른 이진 코드의 접두부가 되지 않는 코드 (즉, 겹치지 않도록 이진 코드를 만드는 것)</li>
+  <li>최적 코드 : 인코딩된 메시지의 길이가 가장 짧은 코드</li>
+</ul>
+
+<hr>
+<a name="eight"><b>8. 재귀 알고리즘에 대해 설명해주세요.</b></a>
+<hr>
+<p>
+재귀 알고리즘이란 함수 내부에서 함수가 자기 자신을 또 다시 호출하여 문제를 해결하는 알고리즘입니다.
+자기자신을 계속해서 호출하여 끝없이 반복되게 되므로 반복을 중단할 조건이 반드시 필요합니다.
+</p>
