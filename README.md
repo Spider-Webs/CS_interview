@@ -8,6 +8,7 @@
   <li><h4><a href="https://github.com/Spider-Webs/CS_interview/blob/main/theme/Algorithm.md">알고리즘 편</a></h4></li>
   <li><h4><a href="https://github.com/Spider-Webs/CS_interview/blob/main/theme/Project.md">프로젝트</a></h4></li>
   <li><h4><a href="https://github.com/Spider-Webs/CS_interview/blob/main/theme/ETC.md">ETC</a></h4></li>
+  <li><h4><a href="https://github.com/Spider-Webs/CS_interview/blob/main/theme/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C.md">ETC</a></h4></li>
 </ol>
 
 <h5>참조</h5>
